@@ -13,10 +13,8 @@ after_success
   - docker build -t keeganrowecycl/multi-nginx ./nginx
   - docker build -t keeganrowecycl/multi-server ./server
   - docker build -t keeganrowecycl/multi-worker ./worker
-
   #Log in to Docker Hub
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-
   #Push images to Docker Hub
   - docker push keeganrowecycl/multi-client
   - docker push keeganrowecycl/multi-nginx
