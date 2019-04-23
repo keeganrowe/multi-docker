@@ -8,7 +8,7 @@ before_install:
 script:
   - docker run keeganrowecycl/react-test npm test -- --coverage
 
-after_success
+after_success:
   - docker build -t keeganrowecycl/multi-client ./client
   - docker build -t keeganrowecycl/multi-nginx ./nginx
   - docker build -t keeganrowecycl/multi-server ./server
